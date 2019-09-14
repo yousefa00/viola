@@ -42,14 +42,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X5b-Ua-ECO">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X5b-Ua-ECO">
                                 <rect key="frame" x="174" y="100" width="67" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="imageedit_5_8967862866"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tlf-fG-vAh">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tlf-fG-vAh">
                                 <rect key="frame" x="174" y="152" width="67" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="imageedit_5_8967862866 copy"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C85-bj-rK9">
@@ -64,9 +62,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How's your day going?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M4a-Z8-7Z9">
-                                <rect key="frame" x="104" y="126" width="207" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="How's your day going?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M4a-Z8-7Z9">
+                                <rect key="frame" x="108.5" y="126" width="197" height="45"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -90,14 +87,26 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="X5b-Ua-ECO" firstAttribute="centerX" secondItem="y1L-zq-VDg" secondAttribute="centerX" id="9ai-Bf-Bwl"/>
+                            <constraint firstItem="M4a-Z8-7Z9" firstAttribute="centerX" secondItem="y1L-zq-VDg" secondAttribute="centerX" id="Lkd-bp-aWA"/>
+                            <constraint firstItem="Tlf-fG-vAh" firstAttribute="centerX" secondItem="y1L-zq-VDg" secondAttribute="centerX" id="MGx-eJ-qOe"/>
+                            <constraint firstItem="X5b-Ua-ECO" firstAttribute="centerX" secondItem="y1L-zq-VDg" secondAttribute="centerX" id="eWL-jg-SsX"/>
+                            <constraint firstItem="X5b-Ua-ECO" firstAttribute="centerX" secondItem="y1L-zq-VDg" secondAttribute="centerX" id="k8y-dX-zHT"/>
+                            <constraint firstItem="Tlf-fG-vAh" firstAttribute="centerX" secondItem="y1L-zq-VDg" secondAttribute="centerX" id="oHS-T1-483"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="wok-Ev-pZL"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="953-IN-pmL" appends="YES" id="tqo-rd-ZF3"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="answerField" destination="ywn-Lm-G3z" id="Tbd-K6-Rgd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XNl-3y-Pvm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="rng-u7-ugN" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="right" id="953-IN-pmL"/>
             </objects>
             <point key="canvasLocation" x="1053.6231884057972" y="117.85714285714285"/>
         </scene>
