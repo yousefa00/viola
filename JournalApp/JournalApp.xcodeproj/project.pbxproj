@@ -109,7 +109,10 @@
 				0493C2C3232D86BA00E00B47 /* Question.swift */,
 				0493C2C5232D89AF00E00B47 /* JournalDate.swift */,
 				0493C297232D788400E00B47 /* Main.storyboard */,
+				3724DEE1232D90A000866856 /* JournalDate.swift */,
+				3724DEE5232D90A700866856 /* Memory.swift */,
 				0493C29A232D788800E00B47 /* Assets.xcassets */,
+				3724DEE9232D90AD00866856 /* Question.swift */,
 				0493C29C232D788800E00B47 /* LaunchScreen.storyboard */,
 				0493C29F232D788800E00B47 /* Info.plist */,
 			);
@@ -268,6 +271,7 @@
 				0493C2C4232D86BA00E00B47 /* Question.swift in Sources */,
 				0493C2C6232D89AF00E00B47 /* JournalDate.swift in Sources */,
 				0493C296232D788400E00B47 /* ViewController.swift in Sources */,
+				3724DEE2232D90A000866856 /* JournalDate.swift in Sources */,
 				0493C294232D788400E00B47 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,7 +280,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3724DEE7232D90A700866856 /* Memory.swift in Sources */,
+				3724DEEB232D90AD00866856 /* Question.swift in Sources */,
 				0493C2A9232D788800E00B47 /* JournalAppTests.swift in Sources */,
+				3724DEE3232D90A000866856 /* JournalDate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +291,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3724DEE8232D90A700866856 /* Memory.swift in Sources */,
+				3724DEEC232D90AD00866856 /* Question.swift in Sources */,
 				0493C2B4232D788800E00B47 /* JournalAppUITests.swift in Sources */,
+				3724DEE4232D90A000866856 /* JournalDate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,11 +457,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 59F3T3BFJD;
 				INFOPLIST_FILE = JournalApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Kryptonite.JournalApp;
+				PRODUCT_BUNDLE_IDENTIFIER = Kryptonite.JournalApppp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -467,11 +478,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 59F3T3BFJD;
 				INFOPLIST_FILE = JournalApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Kryptonite.JournalApp;
+				PRODUCT_BUNDLE_IDENTIFIER = Kryptonite.JournalApppp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
