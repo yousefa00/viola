@@ -14,6 +14,9 @@
 		0493C29E232D788800E00B47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0493C29C232D788800E00B47 /* LaunchScreen.storyboard */; };
 		0493C2A9232D788800E00B47 /* JournalAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493C2A8232D788800E00B47 /* JournalAppTests.swift */; };
 		0493C2B4232D788800E00B47 /* JournalAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493C2B3232D788800E00B47 /* JournalAppUITests.swift */; };
+		CA6C623E232D8DCA00338B36 /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6C623B232D8DCA00338B36 /* Memory.swift */; };
+		CA6C623F232D8DCA00338B36 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6C623C232D8DCA00338B36 /* Question.swift */; };
+		CA6C6240232D8DCA00338B36 /* JournalDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6C623D232D8DCA00338B36 /* JournalDate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		0493C2AF232D788800E00B47 /* JournalAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JournalAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0493C2B3232D788800E00B47 /* JournalAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalAppUITests.swift; sourceTree = "<group>"; };
 		0493C2B5232D788800E00B47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA6C623B232D8DCA00338B36 /* Memory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Memory.swift; sourceTree = "<group>"; };
+		CA6C623C232D8DCA00338B36 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		CA6C623D232D8DCA00338B36 /* JournalDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalDate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +106,9 @@
 				0493C293232D788400E00B47 /* AppDelegate.swift */,
 				0493C295232D788400E00B47 /* ViewController.swift */,
 				0493C297232D788400E00B47 /* Main.storyboard */,
+				CA6C623D232D8DCA00338B36 /* JournalDate.swift */,
+				CA6C623B232D8DCA00338B36 /* Memory.swift */,
+				CA6C623C232D8DCA00338B36 /* Question.swift */,
 				0493C29A232D788800E00B47 /* Assets.xcassets */,
 				0493C29C232D788800E00B47 /* LaunchScreen.storyboard */,
 				0493C29F232D788800E00B47 /* Info.plist */,
@@ -255,6 +264,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA6C623E232D8DCA00338B36 /* Memory.swift in Sources */,
+				CA6C623F232D8DCA00338B36 /* Question.swift in Sources */,
+				CA6C6240232D8DCA00338B36 /* JournalDate.swift in Sources */,
 				0493C296232D788400E00B47 /* ViewController.swift in Sources */,
 				0493C294232D788400E00B47 /* AppDelegate.swift in Sources */,
 			);
