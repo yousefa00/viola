@@ -82,7 +82,6 @@
                                 <state key="normal" title="Submit"/>
                                 <connections>
                                     <action selector="submitAnswer:" destination="f4Y-ZT-IG7" eventType="touchUpInside" id="KFW-2G-cck"/>
-                                    <action selector="submitMemory:" destination="rng-u7-ugN" eventType="touchUpInside" id="DSd-b8-pZO"/>
                                 </connections>
                             </button>
                         </subviews>
