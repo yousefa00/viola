@@ -10,6 +10,8 @@ import UIKit
 
 class MemoryVC: UIViewController {
     
+    @IBOutlet weak var answerField: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -18,6 +20,9 @@ class MemoryVC: UIViewController {
         
     }
     
-    
+    @IBAction func submitAnswer(_ sender: Any) {
+        print("clicked")
+        print(answerField.text)
+    }
 }
 
