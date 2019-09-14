@@ -14,6 +14,9 @@
 		0493C29E232D788800E00B47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0493C29C232D788800E00B47 /* LaunchScreen.storyboard */; };
 		0493C2A9232D788800E00B47 /* JournalAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493C2A8232D788800E00B47 /* JournalAppTests.swift */; };
 		0493C2B4232D788800E00B47 /* JournalAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493C2B3232D788800E00B47 /* JournalAppUITests.swift */; };
+		0493C2C2232D837C00E00B47 /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493C2C1232D837C00E00B47 /* Memory.swift */; };
+		0493C2C4232D86BA00E00B47 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493C2C3232D86BA00E00B47 /* Question.swift */; };
+		0493C2C6232D89AF00E00B47 /* JournalDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493C2C5232D89AF00E00B47 /* JournalDate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		0493C2AF232D788800E00B47 /* JournalAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JournalAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0493C2B3232D788800E00B47 /* JournalAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalAppUITests.swift; sourceTree = "<group>"; };
 		0493C2B5232D788800E00B47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0493C2C1232D837C00E00B47 /* Memory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memory.swift; sourceTree = "<group>"; };
+		0493C2C3232D86BA00E00B47 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		0493C2C5232D89AF00E00B47 /* JournalDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalDate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,9 @@
 			children = (
 				0493C293232D788400E00B47 /* AppDelegate.swift */,
 				0493C295232D788400E00B47 /* ViewController.swift */,
+				0493C2C1232D837C00E00B47 /* Memory.swift */,
+				0493C2C3232D86BA00E00B47 /* Question.swift */,
+				0493C2C5232D89AF00E00B47 /* JournalDate.swift */,
 				0493C297232D788400E00B47 /* Main.storyboard */,
 				0493C29A232D788800E00B47 /* Assets.xcassets */,
 				0493C29C232D788800E00B47 /* LaunchScreen.storyboard */,
@@ -255,6 +264,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0493C2C2232D837C00E00B47 /* Memory.swift in Sources */,
+				0493C2C4232D86BA00E00B47 /* Question.swift in Sources */,
+				0493C2C6232D89AF00E00B47 /* JournalDate.swift in Sources */,
 				0493C296232D788400E00B47 /* ViewController.swift in Sources */,
 				0493C294232D788400E00B47 /* AppDelegate.swift in Sources */,
 			);
@@ -431,7 +443,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 59F3T3BFJD;
 				INFOPLIST_FILE = JournalApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -439,6 +453,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Kryptonite.JournalApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -448,7 +463,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 59F3T3BFJD;
 				INFOPLIST_FILE = JournalApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -456,6 +473,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Kryptonite.JournalApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
