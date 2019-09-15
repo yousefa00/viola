@@ -40,7 +40,7 @@ class MemoryVC: UIViewController {
             user.currentDate = calcDayFromTime(time: Date().timeIntervalSinceReferenceDate)
             // DO SOME CODE THAT GOES BACK TO THE PREVIOUS VC
         }
-        questionLabel.text = user.todaysQuestions[0].getQString()
+        //questionLabel.text = user.todaysQuestions[0].getQString()
     }
     
     func calcDayFromTime (time: TimeInterval) -> Int {
@@ -48,7 +48,31 @@ class MemoryVC: UIViewController {
     }
     
     @IBAction func submitAnswer(_ sender: Any) {
-        print("clicked")
+        let json: [String: Any] = ["documents": [["id":"1", "language":"en", "text": answerField.text!]]]
+
+        let jsonData = try? JSONSerialization.data(withJSONObject: json)
+
+        // create post request
+        let url = URL(string: "https://viola.cognitiveservices.azure.com//text/analytics/v2.1/sentiment")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("06cee61bd83746bdbc40037c3d4c84fd", forHTTPHeaderField: "Ocp-Apim-Subscription-Key")
+        // insert json data to the request
+        request.httpBody = jsonData
+
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data, error == nil else {
+                print(error?.localizedDescription ?? "No data")
+                return
+            }
+            let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
+            if let responseJSON = responseJSON as? [String: Any] {
+                print(responseJSON)
+            }
+        }
+
+        task.resume()
         print(answerField.text)
     }
 }
