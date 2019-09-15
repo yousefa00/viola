@@ -10,7 +10,7 @@ import RealmSwift
 
 class ViewController: UIViewController {
     
-    private var questionArray: [Question] = [Question(question: "What do you feel proud of?"), Question(question: "What do you feel accomplished of?"), Question(question: "What do you feel sad about?"), Question(question: "What do you feel happy about?"), Question(question: "What is something you did today that you've almost never done before?")]
+    private var questionArray: [Question] = [Question(question: "What do you feel proud of?"), Question(question: "What do you feel accomplished of?"), Question(question: "What do you feel sad about?"), Question(question: "What do you feel happy about?"), Question(question: "What is something you did today that you've almost never done before?"), Question(question: "Something/someone you're grateful for?"), Question(question: "Any instances of good/bad luck?"), Question(question: "What would you do if you had an extra hour today?"), Question(question: "Most important thing you accomplished today?"), Question(question: "Hardest thing about today?"), Question(question: "Anything that needs to be finished some other day?"), Question(question: "How did you feel today?"), Question(question: "Did you enjoy your meals today?"), Question(question: "What did you do for self care?"), Question(question: "Did you have to make any sacrifices today?"), Question(question: "Any good new music?")]
     private var todayQuestionArray:[Question] = []
     private var user: User!
     

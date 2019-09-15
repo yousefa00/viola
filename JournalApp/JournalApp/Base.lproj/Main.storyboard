@@ -388,6 +388,7 @@
         <image name="three-bars-icon-5" width="1024" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="c0x-mh-xHf"/>
         <segue reference="UmK-gF-N4E"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
