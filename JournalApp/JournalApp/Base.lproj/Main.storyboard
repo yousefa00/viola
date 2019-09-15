@@ -207,10 +207,10 @@
             </objects>
             <point key="canvasLocation" x="1874" y="125"/>
         </scene>
-        <!--View Controller-->
+        <!--SettingsVC-->
         <scene sceneID="tUr-bv-ZqE">
             <objects>
-                <viewController id="Hm7-72-m5d" sceneMemberID="viewController">
+                <viewController id="Hm7-72-m5d" customClass="SettingsVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ReB-Vv-l71">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -245,6 +245,9 @@
                         <color key="backgroundColor" red="0.66754449940000005" green="0.64923078469999995" blue="0.85830229920000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="gtD-JS-wRu"/>
                     </view>
+                    <connections>
+                        <outlet property="timeOptions" destination="8xE-Hu-dd8" id="F7e-cc-Qa3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m6e-Gd-fod" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

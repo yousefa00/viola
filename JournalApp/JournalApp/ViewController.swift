@@ -14,8 +14,12 @@ class ViewController: UIViewController {
     private var todayQuestionArray:[Question] = []
     private var user: User!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        pickerView.delegate = self
+//        pickerView.dataSource = self
         
         let realm = try! Realm()
         
