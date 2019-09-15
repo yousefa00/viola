@@ -16,6 +16,9 @@ class MemoryVC: UIViewController {
     @IBOutlet weak var questionLabel: UILabel!
     private var questionArray: [String] = []
     private var currentQ = -1
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,8 +85,17 @@ class MemoryVC: UIViewController {
             }
             let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
             if let responseJSON = responseJSON as? [String: Any] {
-                print(responseJSON)
+                let string = responseJSON.description
+                var temp = ""
+                var number = true
+                for char in string {
+                    if (char == "." || number && temp.count <= 2) {
+                        temp += String(char)
+                        number = true
+                    }
+                }
             }
+            
         }
 
         task.resume()
