@@ -122,7 +122,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XNl-3y-Pvm" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="left" id="953-IN-pmL">
                     <connections>
-                        <segue destination="sOM-TP-Uth" kind="show" id="c0x-mh-xHf"/>
+                        <segue destination="sOM-TP-Uth" kind="show" customClass="SegueFromRight" customModule="JournalApp" customModuleProvider="target" id="c0x-mh-xHf"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -174,7 +174,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fM5-6t-2on" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="wea-DC-njp">
                     <connections>
-                        <segue destination="f4Y-ZT-IG7" kind="show" id="UmK-gF-N4E"/>
+                        <segue destination="f4Y-ZT-IG7" kind="show" customClass="SegueFromLeft" customModule="JournalApp" customModuleProvider="target" id="UmK-gF-N4E"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -281,7 +281,8 @@
         <image name="three-bars-icon-5" width="1024" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mUc-Zc-xRm"/>
+        <segue reference="c0x-mh-xHf"/>
+        <segue reference="UmK-gF-N4E"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
