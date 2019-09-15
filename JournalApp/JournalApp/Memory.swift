@@ -11,7 +11,7 @@ import Foundation
 class Memory {
     
     public var userState = 0
-    public var question: Question
+    public var question: Question = Question(question: "How are you today?")
     public var answer = ""
     public var audioFile = 0
     public var state = 0 // 0 is not ready, 1 is pooled, 2 is archived
@@ -39,11 +39,16 @@ class Memory {
                     temp = ""
                 }
             }
+            if (char == "}") {
+                break
+            }
         }
-        dateInt = Int(tempArray[0]) ?? 0
-        dateString = tempArray[1]
-        question = Question(question: tempArray[2])
-        answer = tempArray[3]
+        if (tempArray.count > 0) {
+            dateInt = Int(tempArray[0]) ?? 0
+            dateString = tempArray[1]
+            question = Question(question: tempArray[2])
+            answer = tempArray[3]
+        }
     }
     
     func returnStringForm () -> String {
