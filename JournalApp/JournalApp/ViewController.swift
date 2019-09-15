@@ -48,7 +48,7 @@ class ViewController: UIViewController {
             todayQuestionArray.append(questionArray[i])
         }
     }
-
+        
 
 }
 
