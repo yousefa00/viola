@@ -39,7 +39,7 @@ class ViewController: UIViewController {
             try! realm.write {
                 user.currentDate = calcDayFromTime(time: Date().timeIntervalSinceReferenceDate)
                 for question in todayQuestionArray {
-                    user.todaysQuestions += "_" + question.getQString()
+                    user.todaysQuestions += question.getQString() + "_"
                 }
             }
         }

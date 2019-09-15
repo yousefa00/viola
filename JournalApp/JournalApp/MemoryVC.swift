@@ -14,6 +14,8 @@ class MemoryVC: UIViewController {
     @IBOutlet weak var answerField: UITextView!
     private var user: User!
     @IBOutlet weak var questionLabel: UILabel!
+    private var questionArray: [String] = []
+    private var currentQ = -1
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,9 +36,9 @@ class MemoryVC: UIViewController {
             user = realm.objects(User.self)[0]
             print(user.name)
         }
-        print(Realm.Configuration.defaultConfiguration.fileURL!)
-        print(user.currentDate)
-        print(Date().timeIntervalSinceReferenceDate)
+        
+        writeToQuestions()
+        
         if (user.currentDate != calcDayFromTime(time: Date().timeIntervalSinceReferenceDate)) {
             let realm = try! Realm()
             try! realm.write {
@@ -44,7 +46,7 @@ class MemoryVC: UIViewController {
             }
             // DO SOME CODE THAT GOES BACK TO THE PREVIOUS VC
         } else {
-            questionLabel.text = user.todaysQuestions
+            getNextQuestion()
         }
     }
 
@@ -78,6 +80,25 @@ class MemoryVC: UIViewController {
         }
 
         task.resume()
-        print(answerField.text)
+    }
+    
+    func getNextQuestion() {
+        answerField.text = questionArray[(currentQ + 1) % 5]
+    }
+    
+    func getPreviousQuestion() {
+        answerField.text = questionArray[(currentQ - 1) % 5]
+    }
+    
+    func writeToQuestions() {
+        var temp = ""
+        for char in user.todaysQuestions {
+            if (char == "_") {
+                questionArray.append(temp)
+                temp = ""
+            } else {
+                temp += String(char)
+            }
+        }
     }
 }
