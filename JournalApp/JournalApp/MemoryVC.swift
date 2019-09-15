@@ -91,7 +91,7 @@ class MemoryVC: UIViewController {
 
         task.resume()
         assembleSentimentView(response: sample)
-
+        
     }
 
     func assembleSentimentView(response: String) {
