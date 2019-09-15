@@ -54,6 +54,14 @@ class MemoryVC: UIViewController {
         return Int(time)/(24*60*60)
     }
 
+    @IBAction func questionDown(_ sender: UIButton) {
+        getPreviousQuestion()
+    }
+    
+    @IBAction func questionUp(_ sender: UIButton) {
+        getNextQuestion()
+    }
+    
     @IBAction func submitAnswer(_ sender: Any) {
         let json: [String: Any] = ["documents": [["id":"1", "language":"en", "text": answerField.text!]]]
 
@@ -83,15 +91,20 @@ class MemoryVC: UIViewController {
     }
     
     func getNextQuestion() {
-        answerField.text = questionArray[(currentQ + 1) % 5]
+        print((currentQ + 6) % 5)
+        currentQ = ((currentQ + 6) % 5)
+        questionLabel.text = questionArray[currentQ]
     }
     
     func getPreviousQuestion() {
-        answerField.text = questionArray[(currentQ - 1) % 5]
+        print((currentQ + 4) % 5)
+        currentQ = ((currentQ + 4) % 5)
+        questionLabel.text = questionArray[currentQ]
     }
     
     func writeToQuestions() {
         var temp = ""
+        print(user.todaysQuestions)
         for char in user.todaysQuestions {
             if (char == "_") {
                 questionArray.append(temp)
