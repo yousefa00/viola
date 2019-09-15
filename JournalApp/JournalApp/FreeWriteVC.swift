@@ -46,7 +46,7 @@ class FreeWriteVC: UIViewController {
             }
             // DO SOME CODE THAT GOES BACK TO THE PREVIOUS VC
         } else {
-            getNextQuestion()
+            //getNextQuestion()
         }
     }
     
