@@ -84,7 +84,6 @@ class MemoryVC: UIViewController {
             if let responseJSON = responseJSON as? [String: Any] {
                 print(responseJSON)
             }
-            sample = responseJSON as! String
         }
 
         task.resume()
