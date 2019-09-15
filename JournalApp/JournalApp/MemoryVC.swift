@@ -48,6 +48,7 @@ class MemoryVC: UIViewController {
     }
     
     @IBAction func submitAnswer(_ sender: Any) {
+        var sample = ""
         let json: [String: Any] = ["documents": [["id":"1", "language":"en", "text": answerField.text!]]]
 
         let jsonData = try? JSONSerialization.data(withJSONObject: json)
@@ -70,10 +71,16 @@ class MemoryVC: UIViewController {
             if let responseJSON = responseJSON as? [String: Any] {
                 print(responseJSON)
             }
+            sample = responseJSON as! String
         }
-
+        
         task.resume()
-        print(answerField.text)
+        assembleSentimentView(response: sample)
+        
+    }
+    
+    func assembleSentimentView(response: String) {
+        
     }
 }
 
