@@ -28,13 +28,18 @@ class NameVC: UIViewController {
             nameField.resignFirstResponder()
         }
     }
+    @IBAction func nameSubmittedViaKeyboard(_ sender: Any) {
+        if nameField.isFirstResponder {
+            nameField.resignFirstResponder()
+        }
+        if (nameField.text != "") {
+            performSegue(withIdentifier: "segue1", sender: nameField.text)
+        } 
+    }
     
     @IBAction func nameSubmitted(_ sender: Any) {
         if (nameField.text != "") {
             performSegue(withIdentifier: "segue1", sender: nameField.text)
-        } else {
-            performSegue(withIdentifier: "segue1", sender: nameField.text)
-            print("NO NAME SUBMITTED")
-        } // remove this once keyboard is working on this screen
+        } 
     }
 }
