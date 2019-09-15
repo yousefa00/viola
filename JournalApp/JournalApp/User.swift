@@ -14,5 +14,5 @@ class User: Object {
     @objc dynamic var currentDate = 0
     @objc dynamic var name = ""
     @objc dynamic var created = Date()
-    @objc dynamic var sentiment = 0
+    @objc dynamic var sentiment = "0"
 }

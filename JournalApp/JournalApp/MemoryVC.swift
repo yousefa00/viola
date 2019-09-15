@@ -66,7 +66,7 @@ class MemoryVC: UIViewController {
     @IBAction func submitAnswer(_ sender: Any) {
         var sample = ""
         let json: [String: Any] = ["documents": [["id":"1", "language":"en", "text": answerField.text!]]]
-
+        var sent = "34"
         let jsonData = try? JSONSerialization.data(withJSONObject: json)
 
         // create post request
@@ -94,6 +94,7 @@ class MemoryVC: UIViewController {
                         number = true
                     }
                 }
+                sent = temp
             }
             
         }
@@ -106,6 +107,7 @@ class MemoryVC: UIViewController {
         let realm = try! Realm()
         try! realm.write {
             user.memories += mem.returnStringForm()
+            user.sentiment = sent
         }
     }
 
