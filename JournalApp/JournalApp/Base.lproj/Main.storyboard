@@ -248,6 +248,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PJE-Lu-8U4"/>
                     </view>
+                    <connections>
+                        <outlet property="nameField" destination="56o-Cx-B2r" id="UQZ-fV-xDc"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="segue1" id="4ac-Dy-w5X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KcD-xc-JZ6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

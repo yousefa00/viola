@@ -10,6 +10,9 @@ import UIKit
 
 class NameVC: UIViewController {
     
+    
+    @IBOutlet weak var nameField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -19,6 +22,11 @@ class NameVC: UIViewController {
     }
     
     @IBAction func nameSubmitted(_ sender: Any) {
-        
+        if (nameField.text != "") {
+            performSegue(withIdentifier: "segue1", sender: nameField.text)
+        } else {
+            performSegue(withIdentifier: "segue1", sender: nameField.text)
+            print("NO NAME SUBMITTED")
+        } // remove this once keyboard is working on this screen
     }
 }
