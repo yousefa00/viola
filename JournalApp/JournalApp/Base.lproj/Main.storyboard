@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="JournalApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="JournalApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,7 +73,7 @@
         <!--MemoryVC-->
         <scene sceneID="aLT-XD-4d2">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="f4Y-ZT-IG7" customClass="MemoryVC" customModule="JournalApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="f4Y-ZT-IG7" customClass="MemoryVC" customModule="JournalApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y1L-zq-VDg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -167,10 +167,10 @@
             </objects>
             <point key="canvasLocation" x="1053.6231884057972" y="117.85714285714285"/>
         </scene>
-        <!--View Controller-->
+        <!--Free WriteVC-->
         <scene sceneID="Zqw-69-RDx">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="sOM-TP-Uth" sceneMemberID="viewController">
+                <viewController id="sOM-TP-Uth" customClass="FreeWriteVC" customModule="JournalApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kf2-9q-dhS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -183,13 +183,12 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="three-bars-icon-5"/>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mYA-0y-gJQ">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Write whatever here." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mYA-0y-gJQ">
                                 <rect key="frame" x="57" y="333" width="300" height="500"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="500" id="8VH-dr-5sF"/>
                                     <constraint firstAttribute="width" constant="300" id="a1N-CF-ZyV"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -205,6 +204,9 @@
                                 <state key="normal" title="Submit Entry">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitAnswer:" destination="sOM-TP-Uth" eventType="touchUpInside" id="r14-Yc-aaN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.66746884579999999" green="0.65043413640000003" blue="0.85884976390000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -225,6 +227,9 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="hPF-Ne-avL"/>
+                    <connections>
+                        <outlet property="free" destination="mYA-0y-gJQ" id="3Wt-zv-wTu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fM5-6t-2on" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="wea-DC-njp">
@@ -332,7 +337,7 @@
         <!--SettingsVC-->
         <scene sceneID="cNU-uI-d1Y">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="6Ag-wX-BiZ" customClass="SettingsVC" sceneMemberID="viewController">
+                <viewController id="6Ag-wX-BiZ" customClass="SettingsVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hEZ-ID-RFp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -382,6 +387,7 @@
         <image name="three-bars-icon-5" width="1024" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="c0x-mh-xHf"/>
         <segue reference="UmK-gF-N4E"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
