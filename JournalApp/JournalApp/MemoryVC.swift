@@ -10,19 +10,21 @@ import UIKit
 import RealmSwift
 
 class MemoryVC: UIViewController {
-    
+
     @IBOutlet weak var answerField: UITextView!
     private var user: User!
     @IBOutlet weak var questionLabel: UILabel!
-    
+    private var questionArray: [String] = []
+    private var currentQ = -1
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+
         super.viewDidLoad()
-        
+
         let realm = try! Realm()
-        
+
         if realm.objects(User.self).count == 0 {
             try! realm.write {
                 let newUser = User()
@@ -34,19 +36,32 @@ class MemoryVC: UIViewController {
             user = realm.objects(User.self)[0]
             print(user.name)
         }
-        print(Realm.Configuration.defaultConfiguration.fileURL!)
-        print(Date().timeIntervalSinceReferenceDate)
+
+        writeToQuestions()
+
         if (user.currentDate != calcDayFromTime(time: Date().timeIntervalSinceReferenceDate)) {
-            user.currentDate = calcDayFromTime(time: Date().timeIntervalSinceReferenceDate)
+            let realm = try! Realm()
+            try! realm.write {
+                user.currentDate = calcDayFromTime(time: Date().timeIntervalSinceReferenceDate)
+            }
             // DO SOME CODE THAT GOES BACK TO THE PREVIOUS VC
+        } else {
+            getNextQuestion()
         }
-        //questionLabel.text = user.todaysQuestions[0].getQString()
     }
-    
+
     func calcDayFromTime (time: TimeInterval) -> Int {
-        return Int(time)/24
+        return Int(time)/(24*60*60)
     }
-    
+
+    @IBAction func questionDown(_ sender: UIButton) {
+        getPreviousQuestion()
+    }
+
+    @IBAction func questionUp(_ sender: UIButton) {
+        getNextQuestion()
+    }
+
     @IBAction func submitAnswer(_ sender: Any) {
         var sample = ""
         let json: [String: Any] = ["documents": [["id":"1", "language":"en", "text": answerField.text!]]]
@@ -73,14 +88,38 @@ class MemoryVC: UIViewController {
             }
             sample = responseJSON as! String
         }
-        
+
         task.resume()
         assembleSentimentView(response: sample)
-        
+
     }
-    
+
     func assembleSentimentView(response: String) {
-        
+
+    }
+
+    func getNextQuestion() {
+        print((currentQ + 6) % 5)
+        currentQ = ((currentQ + 6) % 5)
+        questionLabel.text = questionArray[currentQ]
+    }
+
+    func getPreviousQuestion() {
+        print((currentQ + 4) % 5)
+        currentQ = ((currentQ + 4) % 5)
+        questionLabel.text = questionArray[currentQ]
+    }
+
+    func writeToQuestions() {
+        var temp = ""
+        print(user.todaysQuestions)
+        for char in user.todaysQuestions {
+            if (char == "_") {
+                questionArray.append(temp)
+                temp = ""
+            } else {
+                temp += String(char)
+            }
+        }
     }
 }
-
