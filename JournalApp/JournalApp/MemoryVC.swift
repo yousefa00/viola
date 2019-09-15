@@ -94,7 +94,7 @@ class MemoryVC: UIViewController {
         
         let realm = try! Realm()
         try! realm.write {
-            user.memories = mem.returnStringForm()
+            user.memories += mem.returnStringForm()
         }
     }
 

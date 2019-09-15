@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		04196983232E7702003CB937 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04196982232E7702003CB937 /* SettingsVC.swift */; };
 		04196985232E7833003CB937 /* FreeWriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04196984232E7833003CB937 /* FreeWriteVC.swift */; };
+		04196987232E876E003CB937 /* ArchiveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04196986232E876E003CB937 /* ArchiveVC.swift */; };
 		048681FD232DD8EA007FAA14 /* NameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048681FC232DD8EA007FAA14 /* NameVC.swift */; };
 		0493C294232D788400E00B47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493C293232D788400E00B47 /* AppDelegate.swift */; };
 		0493C296232D788400E00B47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493C295232D788400E00B47 /* ViewController.swift */; };
@@ -48,6 +49,7 @@
 /* Begin PBXFileReference section */
 		04196982232E7702003CB937 /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		04196984232E7833003CB937 /* FreeWriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeWriteVC.swift; sourceTree = "<group>"; };
+		04196986232E876E003CB937 /* ArchiveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveVC.swift; sourceTree = "<group>"; };
 		048681FC232DD8EA007FAA14 /* NameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameVC.swift; sourceTree = "<group>"; };
 		0493C290232D788400E00B47 /* JournalApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JournalApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0493C293232D788400E00B47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				04196982232E7702003CB937 /* SettingsVC.swift */,
 				CA6C6241232DA89D00338B36 /* MemoryVC.swift */,
 				0493C297232D788400E00B47 /* Main.storyboard */,
+				04196986232E876E003CB937 /* ArchiveVC.swift */,
 				04196984232E7833003CB937 /* FreeWriteVC.swift */,
 				048681FC232DD8EA007FAA14 /* NameVC.swift */,
 				0493C29A232D788800E00B47 /* Assets.xcassets */,
@@ -359,6 +362,7 @@
 				0493C2C2232D837C00E00B47 /* Memory.swift in Sources */,
 				048681FD232DD8EA007FAA14 /* NameVC.swift in Sources */,
 				CA6C6242232DA89D00338B36 /* MemoryVC.swift in Sources */,
+				04196987232E876E003CB937 /* ArchiveVC.swift in Sources */,
 				04196983232E7702003CB937 /* SettingsVC.swift in Sources */,
 				0493C2C4232D86BA00E00B47 /* Question.swift in Sources */,
 				372521D0232DEDA80003ED96 /* SegueFromRight.swift in Sources */,

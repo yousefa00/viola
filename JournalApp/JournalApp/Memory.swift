@@ -10,15 +10,15 @@ import Foundation
 
 class Memory {
     
-    var userState = 0
-    var question: Question
-    var answer = ""
-    var audioFile = 0
-    var state = 0 // 0 is not ready, 1 is pooled, 2 is archived
-    var string = ""
-    var dateString = ""
-    var dateInt = 0
-    var sentiment = -1
+    public var userState = 0
+    public var question: Question
+    public var answer = ""
+    public var audioFile = 0
+    public var state = 0 // 0 is not ready, 1 is pooled, 2 is archived
+    public var string = ""
+    public var dateString = ""
+    public var dateInt = 0
+    public var sentiment = -1
     
     init(question: Question, answer: String, dateInt: Int, dateString: String) {
         self.question = question
