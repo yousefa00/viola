@@ -89,7 +89,7 @@ class MemoryVC: UIViewController {
                 var temp = ""
                 var number = true
                 for char in string {
-                    if (char == "." || number && temp.count <= 2) {
+                    if ((char == "." || number) && temp.count <= 2) {
                         temp += String(char)
                         number = true
                     }
