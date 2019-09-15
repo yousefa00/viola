@@ -25,7 +25,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.66746884579999999" green="0.65043413640000003" blue="0.85884976390000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="ERQ-vI-bxU"/>
@@ -90,7 +90,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.66746884579999999" green="0.65043413640000003" blue="0.85884976390000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="ywn-Lm-G3z" firstAttribute="centerX" secondItem="y1L-zq-VDg" secondAttribute="centerX" id="5p4-V2-tZq"/>
@@ -153,7 +153,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.66746884579999999" green="0.65043413640000003" blue="0.85884976390000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="mYA-0y-gJQ" firstAttribute="top" secondItem="K3l-0m-GBh" secondAttribute="bottom" constant="226" id="1NB-b2-PDA"/>
@@ -220,6 +220,13 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sDx-6L-lNh">
+                                <rect key="frame" x="184" y="561" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="nameSubmitted:" destination="72C-pz-00W" eventType="touchUpInside" id="YUg-Et-6N8"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="__________________________________________" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SE7-bu-UcJ">
                                 <rect key="frame" x="46.5" y="457" width="321" height="57"/>
                                 <accessibility key="accessibilityConfiguration">
@@ -233,13 +240,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sDx-6L-lNh">
-                                <rect key="frame" x="184" y="561" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="nameSubmitted:" destination="72C-pz-00W" eventType="touchUpInside" id="YUg-Et-6N8"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.6674688458442688" green="0.65043413639068604" blue="0.85884976387023926" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
