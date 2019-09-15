@@ -35,16 +35,21 @@ class MemoryVC: UIViewController {
             print(user.name)
         }
         print(Realm.Configuration.defaultConfiguration.fileURL!)
+        print(user.currentDate)
         print(Date().timeIntervalSinceReferenceDate)
         if (user.currentDate != calcDayFromTime(time: Date().timeIntervalSinceReferenceDate)) {
-            user.currentDate = calcDayFromTime(time: Date().timeIntervalSinceReferenceDate)
+            let realm = try! Realm()
+            try! realm.write {
+                user.currentDate = calcDayFromTime(time: Date().timeIntervalSinceReferenceDate)
+            }
             // DO SOME CODE THAT GOES BACK TO THE PREVIOUS VC
+        } else {
+            questionLabel.text = user.todaysQuestions
         }
-        questionLabel.text = user.todaysQuestions[0].getQString()
     }
     
     func calcDayFromTime (time: TimeInterval) -> Int {
-        return Int(time)/24
+        return Int(time)/(24*60*60)
     }
     
     @IBAction func submitAnswer(_ sender: Any) {
