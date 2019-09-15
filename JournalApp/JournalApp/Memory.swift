@@ -13,17 +13,16 @@ class Memory {
     var userState = 0
     var question: Question
     var answer = ""
-    var freeWrite = ""
     var audioFile = 0
     var state = 0 // 0 is not ready, 1 is pooled, 2 is archived
     var string = ""
     var dateString = ""
     var dateInt = 0
+    var sentiment = -1
     
-    init(question: Question, answer: String, freeWrite: String, dateInt: Int, dateString: String) {
+    init(question: Question, answer: String, dateInt: Int, dateString: String) {
         self.question = question
         self.answer = answer
-        self.freeWrite = freeWrite
         self.dateInt = dateInt
         self.dateString = dateString
     }
@@ -45,10 +44,9 @@ class Memory {
         dateString = tempArray[1]
         question = Question(question: tempArray[2])
         answer = tempArray[3]
-        freeWrite = tempArray[4]
     }
     
     func returnStringForm () -> String {
-        return "{" + String(dateInt) + "=" + dateString + "=" + question.getQString() + "=" + answer + "=" + freeWrite + "=}"
+        return "{" + String(dateInt) + "=" + dateString + "=" + question.getQString() + "=" + answer + "=}"
     }
 }

@@ -37,8 +37,6 @@ class FreeWriteVC: UIViewController {
             print(user.name)
         }
         
-        writeToQuestions()
-        
         if (user.currentDate != calcDayFromTime(time: Date().timeIntervalSinceReferenceDate)) {
             let realm = try! Realm()
             try! realm.write {
@@ -46,7 +44,7 @@ class FreeWriteVC: UIViewController {
             }
             // DO SOME CODE THAT GOES BACK TO THE PREVIOUS VC
         } else {
-            getNextQuestion()
+            
         }
     }
     
@@ -85,22 +83,11 @@ class FreeWriteVC: UIViewController {
         task.resume()
         assembleSentimentView(response: sample)
         
+        
+
     }
     
     func assembleSentimentView(response: String) {
         
-    }
-    
-    func writeToQuestions() {
-        var temp = ""
-        print(user.todaysQuestions)
-        for char in user.todaysQuestions {
-            if (char == "_") {
-                questionArray.append(temp)
-                temp = ""
-            } else {
-                temp += String(char)
-            }
-        }
     }
 }
