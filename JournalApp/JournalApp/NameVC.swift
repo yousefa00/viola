@@ -10,7 +10,6 @@ import UIKit
 
 class NameVC: UIViewController {
     
-    
     @IBOutlet weak var nameField: UITextField!
     
     override func viewDidLoad() {
@@ -19,6 +18,15 @@ class NameVC: UIViewController {
         
         print(Date.init())
         
+        let clickViewGesture = UITapGestureRecognizer(target: self, action:  #selector (self.clickView (_:)))
+        self.view.addGestureRecognizer(clickViewGesture)
+        
+    }
+    
+    @objc func clickView(_ sender:UITapGestureRecognizer){
+        if nameField.isFirstResponder {
+            nameField.resignFirstResponder()
+        }
     }
     
     @IBAction func nameSubmitted(_ sender: Any) {
