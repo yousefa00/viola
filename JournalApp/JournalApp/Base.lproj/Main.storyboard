@@ -32,19 +32,22 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="What would you like to do?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpx-GI-yav">
-                                <rect key="frame" x="20" y="186" width="374" height="173"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="40"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View a past memory." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2h-Px-1Mc">
                                 <rect key="frame" x="65" y="459" width="284" height="39"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="28"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9q-IJ-ZWE">
-                                <rect key="frame" x="20" y="44" width="45" height="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="What would you like to do?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpx-GI-yav">
+                                <rect key="frame" x="20" y="115" width="374" height="251"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="337" id="Tdv-Nf-Z1h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9q-IJ-ZWE">
+                                <rect key="frame" x="20" y="67" width="45" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="WIX-uf-UA7"/>
                                     <constraint firstAttribute="width" constant="45" id="kKd-eK-1UJ"/>
@@ -62,7 +65,9 @@
                         </subviews>
                         <color key="backgroundColor" red="0.66746884579999999" green="0.65043413640000003" blue="0.85884976390000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="N9q-IJ-ZWE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-164.5" id="Dkc-kC-dGx"/>
                             <constraint firstItem="6JK-LB-Agd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QJ5-4r-7fS"/>
+                            <constraint firstItem="N9q-IJ-ZWE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-361" id="QeJ-Mb-te1"/>
                             <constraint firstItem="m2h-Px-1Mc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T9X-in-4Ft"/>
                             <constraint firstItem="bpx-GI-yav" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Tl7-yp-inl"/>
                             <constraint firstItem="bpx-GI-yav" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aol-tA-Pnh"/>
@@ -116,13 +121,13 @@
                                     <action selector="submitAnswer:" destination="f4Y-ZT-IG7" eventType="touchUpInside" id="KFW-2G-cck"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ywn-Lm-G3z">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Type here..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ywn-Lm-G3z">
                                 <rect key="frame" x="57" y="333" width="300" height="500"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="M5A-x9-Mlf"/>
                                     <constraint firstAttribute="height" constant="500" id="ukm-il-QLY"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's on your mind?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M4a-Z8-7Z9">
@@ -132,12 +137,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C85-bj-rK9">
-                                <rect key="frame" x="20" y="44" width="45" height="40"/>
+                                <rect key="frame" x="20" y="75" width="45" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="5NQ-WL-d5C"/>
                                     <constraint firstAttribute="width" constant="45" id="cCp-2m-Vhu"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="three-bars-icon-5"/>
+                                <connections>
+                                    <segue destination="6Ag-wX-BiZ" kind="show" id="Nuh-xV-1R4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.66746884579999999" green="0.65043413640000003" blue="0.85884976390000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
