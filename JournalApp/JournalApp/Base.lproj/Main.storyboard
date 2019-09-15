@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="JournalApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="JournalApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,14 +32,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9q-IJ-ZWE">
-                                <rect key="frame" x="20" y="20" width="45" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="WIX-uf-UA7"/>
-                                    <constraint firstAttribute="width" constant="45" id="kKd-eK-1UJ"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="three-bars-icon-5"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="What would you like to do?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpx-GI-yav">
                                 <rect key="frame" x="20" y="186" width="374" height="173"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="40"/>
@@ -51,6 +43,14 @@
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="28"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9q-IJ-ZWE">
+                                <rect key="frame" x="20" y="44" width="45" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="WIX-uf-UA7"/>
+                                    <constraint firstAttribute="width" constant="45" id="kKd-eK-1UJ"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="three-bars-icon-5"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.66746884579999999" green="0.65043413640000003" blue="0.85884976390000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
@@ -74,7 +74,7 @@
         <!--MemoryVC-->
         <scene sceneID="aLT-XD-4d2">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="f4Y-ZT-IG7" customClass="MemoryVC" customModule="JournalApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="f4Y-ZT-IG7" customClass="MemoryVC" customModule="JournalApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y1L-zq-VDg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -101,14 +101,6 @@
                                     <action selector="questionDown:" destination="f4Y-ZT-IG7" eventType="touchUpInside" id="fM5-ki-I6T"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C85-bj-rK9">
-                                <rect key="frame" x="20" y="67" width="45" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="5NQ-WL-d5C"/>
-                                    <constraint firstAttribute="width" constant="45" id="cCp-2m-Vhu"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="three-bars-icon-5"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPk-Dg-R4w">
                                 <rect key="frame" x="182.5" y="283" width="49" height="30"/>
                                 <state key="normal" title="Submit"/>
@@ -131,6 +123,14 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C85-bj-rK9">
+                                <rect key="frame" x="20" y="44" width="45" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="5NQ-WL-d5C"/>
+                                    <constraint firstAttribute="width" constant="45" id="cCp-2m-Vhu"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="three-bars-icon-5"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.66746884579999999" green="0.65043413640000003" blue="0.85884976390000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
@@ -171,7 +171,7 @@
         <!--View Controller-->
         <scene sceneID="Zqw-69-RDx">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="sOM-TP-Uth" sceneMemberID="viewController">
+                <viewController id="sOM-TP-Uth" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kf2-9q-dhS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -333,7 +333,7 @@
         <!--SettingsVC-->
         <scene sceneID="cNU-uI-d1Y">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="6Ag-wX-BiZ" customClass="SettingsVC" sceneMemberID="viewController">
+                <viewController id="6Ag-wX-BiZ" customClass="SettingsVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hEZ-ID-RFp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -383,8 +383,7 @@
         <image name="three-bars-icon-5" width="1024" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="c0x-mh-xHf"/>
-        <segue reference="UmK-gF-N4E"/>
+        <segue reference="mUc-Zc-xRm"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
