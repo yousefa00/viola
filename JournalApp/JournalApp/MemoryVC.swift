@@ -21,8 +21,6 @@ class MemoryVC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 
-        super.viewDidLoad()
-
         let realm = try! Realm()
 
         if realm.objects(User.self).count == 0 {
@@ -92,6 +90,12 @@ class MemoryVC: UIViewController {
         task.resume()
         assembleSentimentView(response: sample)
         
+        var mem = Memory(question: Question(question: questionLabel.text!), answer: answerField.text!, dateInt: user.currentDate, dateString: String(Date.init().description))
+        
+        let realm = try! Realm()
+        try! realm.write {
+            user.memories = mem.returnStringForm()
+        }
     }
 
     func assembleSentimentView(response: String) {
@@ -121,5 +125,10 @@ class MemoryVC: UIViewController {
                 temp += String(char)
             }
         }
+    }
+    
+    func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        print("RUNNING CHICKENS")
     }
 }
