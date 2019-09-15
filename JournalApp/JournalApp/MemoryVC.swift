@@ -95,7 +95,7 @@ class MemoryVC: UIViewController {
     }
 
     func assembleSentimentView(response: String) {
-
+        
     }
 
     func getNextQuestion() {
