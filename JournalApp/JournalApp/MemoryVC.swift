@@ -86,31 +86,42 @@ class MemoryVC: UIViewController {
             let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
             if let responseJSON = responseJSON as? [String: Any] {
                 let string = responseJSON.description
+                print(responseJSON.description)
                 var temp = ""
-                var number = true
+                var number = false
                 for char in string {
                     if ((char == "." || number) && temp.count <= 2) {
                         temp += String(char)
                         number = true
                     }
                 }
+                print(temp)
                 sent = temp
             }
             
         }
 
         task.resume()
+        
         assembleSentimentView(response: sample)
-        
-        var mem = Memory(question: Question(question: questionLabel.text!), answer: answerField.text!, dateInt: user.currentDate, dateString: String(Date.init().description))
-        
-        let realm = try! Realm()
-        try! realm.write {
-            user.memories += mem.returnStringForm()
-            user.sentiment = sent
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { // Change `2.0` to the desired number of seconds.
+            // Code you want to be delayed
+            var mem = Memory(question: Question(question: self.questionLabel.text!), answer: self.answerField.text!, dateInt: self.user.currentDate, dateString: String(Date.init().description))
+            
+            let realm = try! Realm()
+            try! realm.write {
+                self.user.memories += mem.returnStringForm()
+                self.user.sentiment = sent
+                print(self.self.user.sentiment)
+            }
+            print("flying chickens")
         }
+        
+        
+        
+        
     }
-
+    
     func assembleSentimentView(response: String) {
         
     }

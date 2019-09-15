@@ -49,8 +49,16 @@ class ViewController: UIViewController {
                 }
             }
         }
-        
-        sLabel.text! = String(user.sentiment)
+        print(user.sentiment)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            self.sLabel.text! = String(self.user.sentiment)
+        }
+        let clickViewGesture = UITapGestureRecognizer(target: self, action:  #selector (self.clickView (_:)))
+        self.view.addGestureRecognizer(clickViewGesture)
+    }
+    
+    @objc func clickView(_ sender:UITapGestureRecognizer){
+        self.sLabel.text! = String(self.user.sentiment)
     }
     
     func questionGenerator () {

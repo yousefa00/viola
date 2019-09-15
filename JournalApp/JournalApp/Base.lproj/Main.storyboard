@@ -65,14 +65,14 @@
                                     <segue destination="Yms-4v-ROP" kind="show" id="Luw-eV-Rq4"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Today's Sentiment Value: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5C-f9-eyT">
-                                <rect key="frame" x="65" y="681" width="197" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sentiment Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Als-ZW-dEh">
+                                <rect key="frame" x="198.5" y="681" width="124.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Sentiment Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Als-ZW-dEh">
-                                <rect key="frame" x="281" y="681" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Today's Sentiment Value: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5C-f9-eyT">
+                                <rect key="frame" x="0.0" y="680" width="197" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -87,6 +87,7 @@
                             <constraint firstItem="N9q-IJ-ZWE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-361" id="QeJ-Mb-te1"/>
                             <constraint firstItem="m2h-Px-1Mc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T9X-in-4Ft"/>
                             <constraint firstItem="bpx-GI-yav" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Tl7-yp-inl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Als-ZW-dEh" secondAttribute="trailing" constant="91" id="ZGB-sh-zkK"/>
                             <constraint firstItem="bpx-GI-yav" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aol-tA-Pnh"/>
                             <constraint firstItem="bpx-GI-yav" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-184" id="dhm-7v-laC"/>
                             <constraint firstItem="Als-ZW-dEh" firstAttribute="height" secondItem="z5C-f9-eyT" secondAttribute="height" id="g1R-ah-AGc"/>
