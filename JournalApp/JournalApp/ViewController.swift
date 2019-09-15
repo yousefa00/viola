@@ -32,12 +32,21 @@ class ViewController: UIViewController {
             }
         } else {
             user = realm.objects(User.self)[0]
+            print(user.name)
         }
         print(Realm.Configuration.defaultConfiguration.fileURL!)
-        
-        questionGenerator()
-        user.todaysQuestions = todayQuestionArray
-        
+        print(Date().timeIntervalSinceReferenceDate)
+        print(user.currentDate)
+        if (user.currentDate != calcDayFromTime(time: Date().timeIntervalSinceReferenceDate)) {
+            questionGenerator()
+            let realm = try! Realm()
+            try! realm.write {
+                user.currentDate = calcDayFromTime(time: Date().timeIntervalSinceReferenceDate)
+                for question in todayQuestionArray {
+                    user.todaysQuestions += question.getQString() + "_"
+                }
+            }
+        }
     }
     
     func questionGenerator () {
@@ -51,6 +60,10 @@ class ViewController: UIViewController {
         for i in numbers {
             todayQuestionArray.append(questionArray[i])
         }
+    }
+    
+    func calcDayFromTime (time: TimeInterval) -> Int {
+        return Int(time)/(24 * 60 * 60)
     }
 
 

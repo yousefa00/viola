@@ -19,7 +19,7 @@ class NameVC: UIViewController {
         // Do any additional setup after loading the view.
         
         let realm = try! Realm()
-        
+        print(realm.objects(User.self).count)
         if realm.objects(User.self).count == 0 {
             try! realm.write {
                 let newUser = User()
@@ -28,13 +28,20 @@ class NameVC: UIViewController {
             }
         } else {
             user = realm.objects(User.self)[0]
-            performSegue(withIdentifier: "segue1", sender: nameField.text)
+            print("running")
         }
         print(Realm.Configuration.defaultConfiguration.fileURL!)
         
         let clickViewGesture = UITapGestureRecognizer(target: self, action:  #selector (self.clickView (_:)))
         self.view.addGestureRecognizer(clickViewGesture)
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if (user.name != "") {
+            performSegue(withIdentifier: "segue1", sender: nameField.text)
+        }
     }
     
     @objc func clickView(_ sender:UITapGestureRecognizer){
@@ -48,14 +55,20 @@ class NameVC: UIViewController {
             nameField.resignFirstResponder()
         }
         if (nameField.text != "") {
-            user.name = nameField.text!
+            let realm = try! Realm()
+            try! realm.write {
+                user.name = nameField.text!
+            }
             performSegue(withIdentifier: "segue1", sender: nameField.text)
         } 
     }
     
     @IBAction func nameSubmitted(_ sender: Any) {
         if (nameField.text != "") {
-            user.name = nameField.text!
+            let realm = try! Realm()
+            try! realm.write {
+                user.name = nameField.text!
+            }
             performSegue(withIdentifier: "segue1", sender: nameField.text)
         } 
     }
