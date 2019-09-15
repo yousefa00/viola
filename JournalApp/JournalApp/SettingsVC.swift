@@ -15,8 +15,8 @@ class SettingsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        pickerView.delegate = self
-        pickerView.dataSource = self
+       // pickerView.delegate = self
+       // pickerView.dataSource = self
         
         print(Date.init())
         
